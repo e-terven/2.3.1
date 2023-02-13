@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>cars</title>
+<!--    <link rel="stylesheet" type="text/css" href="/css/car_style.css"/>-->
+    <style>
+        table {
+            margin: 10% auto;
+            width: 40%;
+        }
+        table, th, td {
+            border: 1px solid;
+            width: 30%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        tr:hover td {
+            background-color: #51b651;
+        }
+        td {
+            background-color: lightgreen;
+        }
+        th {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+<h1 th:text="${cars}"/>
+    <table>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">Model</th>
+            <th scope="col">Series</th>
+        </tr>
+        <tbody>
+        <tr th:each="car : ${cars}">
+            <td th:text="${car.id}">
+            <td th:text="${car.model}">
+            <td th:text="${car.series}">
+        </tr>
+        </tbody>
+    </table>
+</body>

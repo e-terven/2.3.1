@@ -1,17 +1,24 @@
 package web.model;
 
 public class Car {
+    private int id;
     private String model;
     private String series;
     private int year;
 
-    public Car () { }
-    public Car(String model, String series, int year) {
+    public Car (int id, String model, String series) { }
+    public Car(String model, String series) {
+        this.id = id;
         this.model = model;
         this.series = series;
-        this.year = year;
     }
 
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
     public String getModel() {
         return model;
     }
@@ -26,15 +33,9 @@ public class Car {
         this.series = series;
     }
 
-    public int getYear() {
-        return year;
-    }
-    public void setYear(int year) {
-        this.year = year;
-    }
 
     @Override
     public String toString() {
-        return "Car: " + model + ", " + series + " (" + year + ")";
+        return id + ". Car: " + model + ", " + series;
     }
 }
