@@ -12,11 +12,10 @@ public class User {
     @Column (name = "name")
     private String name;
     @Column (name = "age")
-    private Byte age;
+    private int age;
 
     public User () { }
-    public User(Long id, String name, Byte age) {
-        this.id = id;
+    public User(String name, int age) {
         this.name = name;
         this.age = age;
     }
@@ -33,7 +32,7 @@ public class User {
     public void setName(String name) {
         this.name = name;
     }
-    public Byte getAge() {
+    public int getAge() {
         return age;
     }
     public void setAge(Byte age) {

@@ -17,18 +17,8 @@ public class UserDaoImpl implements UserDao {
     public List<User> getAllUsers() {
         List<User> list = new ArrayList<>();
 
-        try (Session session = getSessionFactory().openSession()) {
-
-            transaction = session.beginTransaction();
-            list = session.createQuery("from User").list();
-            transaction.commit();
-            System.out.println('\n' + "Users list:");
-
-        } catch (HibernateException e) {
-            if (transaction != null) {
-                transaction.rollback();
-            }
-        }
+        list.add(new User("Name 1", 10));
+        System.out.println('\n' + "Users list:");
         return list;
     }
 }
