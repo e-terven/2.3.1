@@ -1,14 +1,14 @@
 package web.model;
 
 public class Car {
+    private static int nextId = 1;
     private int id;
     private String model;
     private String series;
-    private int year;
 
-    public Car (int id, String model, String series) { }
-    public Car(String model, String series) {
-        this.id = id;
+    public Car () { }
+    public Car(int id, String model, String series) {
+        this.id = nextId++;
         this.model = model;
         this.series = series;
     }
