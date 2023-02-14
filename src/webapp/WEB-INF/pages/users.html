@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>cars</title>
+    <title>users</title>
 <!--    <link rel="stylesheet" type="text/css" href="/css/car_style.css"/>-->
     <style>
         table {
@@ -33,14 +33,14 @@
     <table>
         <tr>
             <th scope="col">id</th>
-            <th scope="col">Model</th>
-            <th scope="col">Series</th>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
         </tr>
 
-        <tr th:each="car : ${cars}">
-            <td th:text="${car.id}">...</td>
-            <td th:text="${car.model}">...</td>
-            <td th:text="${car.getSeries()}">...</td>
+        <tr th:each="user : ${users}">
+            <td th:text="${users.id}">...</td>
+            <td th:text="${users.name}">...</td>
+            <td th:text="${users.age}">...</td>
         </tr>
     </table>
 </body>
