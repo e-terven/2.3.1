@@ -45,6 +45,9 @@ public class AppConfig {
         dataSource.setUrl(env.getProperty("db.url"));
         dataSource.setUsername(env.getProperty("db.username"));
         dataSource.setPassword(env.getProperty("db.password"));
+        dataSource.addConnectionProperty("hibernate.hbm2ddl.auto", "");
+        dataSource.addConnectionProperty("hibernate.dialect", "");
+        dataSource.addConnectionProperty("hibernate.show.sql", "");
 
         dataSource.setInitialSize(Integer.parseInt(env.getRequiredProperty("db.initialSize")));
         dataSource.setMinIdle(Integer.valueOf(env.getRequiredProperty("db.minIdle")));

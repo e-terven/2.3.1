@@ -1,17 +1,19 @@
 package web.model;
 
+import org.hibernate.annotations.GenericGenerators;
+
 import javax.persistence.*;
 
 @Entity
-@Table(name = "users_231")
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (name = "id")
+    @Column (name = "id", nullable = false)
     private Long id;
-    @Column (name = "name")
+    @Column (name = "name", nullable = false, length = 50)
     private String name;
-    @Column (name = "age")
+    @Column (name = "age", nullable = false)
     private int age;
 
     public User () { }
@@ -42,6 +44,6 @@ public class User {
 
     @Override
     public String toString() {
-        return id + ". User: " + name + ", " + age;
+        return  id + " .User: " + name + ", " + age;
     }
 }
