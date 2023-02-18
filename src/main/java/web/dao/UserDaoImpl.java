@@ -10,15 +10,16 @@ import java.util.List;
 
 @Repository
 public class UserDaoImpl implements UserDao {
-    public UserDaoImpl(){
-
-    }
-    @Override
-    public List<User> getAllUsers() {
-        List<User> list = new ArrayList<>();
-
-        list.add(new User("Name 1", 10));
-        System.out.println('\n' + "Users list:");
-        return list;
-    }
+//    public UserDaoImpl(){
+//
+//    }
+//    @Override
+//    public List<User> getAllUsers() {
+//        List<User> list = new ArrayList<>();
+//
+//        list.add(new User("Name 1", 10));
+//        list.add(new User("Name 2", 20));
+//        System.out.println('\n' + "Users list:");
+//        return list;
+//    }
 }

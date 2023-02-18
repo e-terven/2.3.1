@@ -9,15 +9,15 @@ import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
-    private UserDao userDao;
-    @Autowired
-    public UserServiceImpl(UserDao userDao) {
-        this.userDao = userDao;
-    }
+//      private UserDao userDao;
+//    @Autowired
+//    public UserServiceImpl(UserDao userDao) {
+//        this.userDao = userDao;
+//    }
 
-    public List<User> getAllUsers() {
-
-        return userDao.getAllUsers();
-    }
+//    public List<User> getAllUsers() {
+//
+//        return userDao.getAllUsers();
+//    }
 
 }

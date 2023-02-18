@@ -45,11 +45,11 @@ public class AppConfig {
         dataSource.setUrl(env.getProperty("db.url"));
         dataSource.setUsername(env.getProperty("db.username"));
         dataSource.setPassword(env.getProperty("db.password"));
-        dataSource.addConnectionProperty("hibernate.hbm2ddl.auto", "");
-        dataSource.addConnectionProperty("hibernate.dialect", "");
-        dataSource.addConnectionProperty("hibernate.show.sql", "");
+//        dataSource.setConnectionProperties("hibernate.hbm2ddl.auto");
+//        dataSource.addConnectionProperty("hibernate.dialect", "");
+//        dataSource.addConnectionProperty("hibernate.show.sql", "");
 
-        dataSource.setInitialSize(Integer.parseInt(env.getRequiredProperty("db.initialSize")));
+        dataSource.setInitialSize(Integer.valueOf(env.getRequiredProperty("db.initialSize")));
         dataSource.setMinIdle(Integer.valueOf(env.getRequiredProperty("db.minIdle")));
         dataSource.setMaxIdle(Integer.valueOf(env.getRequiredProperty("db.maxIdle")));
         dataSource.setTimeBetweenEvictionRunsMillis(Long.valueOf(env.getRequiredProperty("db.timeBetweenEvictionRunsMillis")));

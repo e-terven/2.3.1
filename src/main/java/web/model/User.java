@@ -1,23 +1,22 @@
 package web.model;
-
-import org.hibernate.annotations.GenericGenerators;
-
 import javax.persistence.*;
 
 @Entity
 @Table(name = "users")
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (name = "id", nullable = false)
     private Long id;
-    @Column (name = "name", nullable = false, length = 50)
+
+    @Column(name = "age")
+    private Byte age;
+
+    @Column(name = "name")
     private String name;
-    @Column (name = "age", nullable = false)
-    private int age;
 
     public User () { }
-    public User(String name, int age) {
+    public User(String name, Byte age) {
         this.name = name;
         this.age = age;
     }
